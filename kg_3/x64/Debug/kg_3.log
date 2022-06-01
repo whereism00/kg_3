@@ -1,0 +1,15 @@
+﻿  Source.cpp
+C:\Users\marie\Desktop\kg_3\kg_3\shader.h(69,16): warning C4101: infoLog: неиспользованная локальная переменная
+C:\Users\marie\Desktop\kg_3\kg_3\shader.h(68,15): warning C4101: success: неиспользованная локальная переменная
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(72,11): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(73,11): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(77,18): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(78,18): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(80,10): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(81,10): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(88,28): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\marie\Desktop\kg_3\kg_3\Source.cpp(173,24): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+glew32s.lib(glew.obj) : warning LNK4099: "vc120.pdb" PDB не найден с "glew32s.lib(glew.obj)" или на "C:\Users\marie\Desktop\kg_3\x64\Debug\vc120.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+LINK : warning LNK4098: библиотека по умолчанию "LIBCMT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+LINK : warning LNK4098: библиотека по умолчанию "MSVCRT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+  kg_3.vcxproj -> C:\Users\marie\Desktop\kg_3\x64\Debug\kg_3.exe
