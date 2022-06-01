@@ -5,6 +5,9 @@
 #include "camera.h"
 #include <iostream>
 
+//позиция камеры
+Camera camera(glm::vec3(1.0f, 0.0f, 10.0f));
+
 //window size
 const GLuint width = 800, height = 600;
 
@@ -99,14 +102,3 @@ GLFWwindow* init()
 
 	return window;
 }
-
-class window
-{
-public:
-	Camera camera;
-
-	window(Camera c)
-	{
-		camera = c;
-	}
-};

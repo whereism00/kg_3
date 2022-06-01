@@ -28,17 +28,12 @@ public:
         make_vertices();
 
 		glGenVertexArrays(1, &side_VAO);
-        glGenVertexArrays(1, &top_VAO);
-        glGenVertexArrays(1, &bottom_VAO);
 		glGenBuffers(1, &side_VBO);
-        glGenBuffers(1, &top_VBO);
-        glGenBuffers(1, &bottom_VBO);
 
 		// Bind the Vertex Array Object first, then bind and set vertex buffer(s) and attribute pointer(s).
 		glBindVertexArray(side_VAO);
-
 		glBindBuffer(GL_ARRAY_BUFFER, side_VBO);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(side_vertices.data()), side_vertices.data(), GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, side_vertices.size() * sizeof(float), side_vertices.data(), GL_STATIC_DRAW);
 
 		// position attribute
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
@@ -49,10 +44,13 @@ public:
 
 		glBindVertexArray(0); // Unbind VAO
 
+        glGenVertexArrays(1, &bottom_VAO);
+
         glBindVertexArray(bottom_VAO);
+        glGenBuffers(1, &bottom_VBO);
 
         glBindBuffer(GL_ARRAY_BUFFER, bottom_VBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(bottom_vertices.data()), bottom_vertices.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, bottom_vertices.size() * sizeof(float), bottom_vertices.data(), GL_STATIC_DRAW);
 
         // position attribute
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
@@ -63,10 +61,13 @@ public:
 
         glBindVertexArray(0); // Unbind VAO
 
+        glGenVertexArrays(1, &top_VAO);
+
         glBindVertexArray(top_VAO);
+        glGenBuffers(1, &top_VBO);
 
         glBindBuffer(GL_ARRAY_BUFFER, top_VBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(top_vertices.data()),  top_vertices.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, top_vertices.size() * sizeof(float), top_vertices.data(), GL_STATIC_DRAW);
 
         // position attribute
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
@@ -171,7 +172,7 @@ public:
             bottom_vertices.push_back(s);
 
             bottom_vertices.push_back(0.0f);
-            bottom_vertices.push_back(- 1.0f);
+            bottom_vertices.push_back(-1.0f);
             bottom_vertices.push_back(0.0f);
 
             top_vertices.push_back(c * 0.7f);
